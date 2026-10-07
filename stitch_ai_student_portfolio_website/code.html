@@ -1,0 +1,874 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ALEX.DEV // AI LAB - Alex Chen Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#e1e0ff",
+            "on-tertiary-fixed-variant": "#2f2ebe",
+            "on-tertiary-container": "#fffbff",
+            "surface-variant": "#d3e4fe",
+            "on-background": "#0b1c30",
+            "surface-container": "#e5eeff",
+            "primary-fixed-dim": "#93ccff",
+            "tertiary": "#4648d4",
+            "outline": "#707881",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#006172",
+            "tertiary-fixed-dim": "#c0c1ff",
+            "on-primary-container": "#fdfcff",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f8f9ff",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#d3e4fe",
+            "primary": "#006194",
+            "tertiary-container": "#6063ee",
+            "outline-variant": "#bfc7d2",
+            "primary-fixed": "#cce5ff",
+            "secondary": "#00687a",
+            "surface-tint": "#006398",
+            "secondary-fixed-dim": "#4cd7f6",
+            "inverse-primary": "#93ccff",
+            "inverse-surface": "#213145",
+            "secondary-fixed": "#acedff",
+            "secondary-container": "#57dffe",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#001f26",
+            "surface-container-high": "#dce9ff",
+            "inverse-on-surface": "#eaf1ff",
+            "on-tertiary": "#ffffff",
+            "background": "#f8f9ff",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "on-surface": "#0b1c30",
+            "on-tertiary-fixed": "#07006c",
+            "on-secondary-fixed-variant": "#004e5c",
+            "on-surface-variant": "#3f4850",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#004b73",
+            "on-primary-fixed": "#001d31",
+            "surface": "#f8f9ff",
+            "primary-container": "#007bb9",
+            "surface-dim": "#cbdbf5",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["JetBrains Mono"],
+            "body-sm": ["Geist"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "label-sm": ["JetBrains Mono"],
+            "display-lg": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "display-lg-mobile": ["Space Grotesk"],
+            "label-lg": ["JetBrains Mono"],
+            "headline-md": ["Space Grotesk"],
+            "body-md": ["Geist"],
+            "body-lg": ["Geist"]
+          },
+          "fontSize": {
+            "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "400" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    .frosted-glass-card {
+      background: rgba(255, 255, 255, 0.62);
+      backdrop-filter: blur(18px) saturate(170%);
+      -webkit-backdrop-filter: blur(18px) saturate(170%);
+      border-top: 1px solid rgba(255, 255, 255, 0.95);
+      border-left: 1px solid rgba(255, 255, 255, 0.7);
+      border-right: 1px solid rgba(211, 228, 254, 0.5);
+      border-bottom: 1px solid rgba(191, 199, 210, 0.35);
+      box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9), 0 8px 30px -4px rgba(0, 97, 148, 0.06);
+    }
+    .frosted-glass-active {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(87, 223, 254, 0.5);
+      box-shadow: 0 12px 32px -4px rgba(0, 97, 148, 0.12), inset 0 0 16px 0 rgba(255, 255, 255, 0.85);
+    }
+    .ambient-glow-circle {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased relative min-h-screen selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Ambient Frozen Ice Lights -->
+<div class="ambient-glow-circle w-[550px] h-[550px] bg-secondary-fixed-dim/20 -top-32 -left-20"></div>
+<div class="ambient-glow-circle w-[650px] h-[650px] bg-primary-fixed-dim/25 top-[25%] -right-32"></div>
+<div class="ambient-glow-circle w-[600px] h-[600px] bg-tertiary-fixed/30 top-[60%] left-1/4"></div>
+<!-- Shared Component: TopNavBar (floating capsule) -->
+<header class="fixed top-4 inset-x-0 mx-auto max-w-5xl rounded-full z-50 bg-surface-container-lowest/75 backdrop-blur-xl border border-surface-container-highest/60 shadow-lg shadow-primary/5 transition-all duration-200">
+<div class="flex justify-between items-center w-full px-6 py-2.5">
+<!-- Brand Logo Anchor -->
+<a class="text-label-lg font-label-lg font-bold text-primary tracking-widest uppercase flex items-center gap-2" href="#hero">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse border border-primary/40"></span>
+        ALEX.DEV // AI LAB
+      </a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-1.5">
+<a class="text-primary font-label-md text-label-md bg-secondary-container/30 rounded-full px-3 py-1 hover:text-primary hover:bg-surface-container/50 transition-all duration-150" href="#research">Research</a>
+<a class="text-on-surface-variant font-label-md text-label-md px-3 py-1 hover:text-primary hover:bg-surface-container/50 transition-all duration-150" href="#projects">Projects</a>
+<a class="text-on-surface-variant font-label-md text-label-md px-3 py-1 hover:text-primary hover:bg-surface-container/50 transition-all duration-150" href="#stack">Stack</a>
+<a class="text-on-surface-variant font-label-md text-label-md px-3 py-1 hover:text-primary hover:bg-surface-container/50 transition-all duration-150" href="#code-inference">Inference</a>
+<a class="text-on-surface-variant font-label-md text-label-md px-3 py-1 hover:text-primary hover:bg-surface-container/50 transition-all duration-150" href="#milestones">Milestones</a>
+</nav>
+<!-- Trailing Icon Actions & CTA Buttons -->
+<div class="flex items-center gap-2">
+<div class="hidden sm:flex items-center gap-1 text-on-surface-variant pr-2 border-r border-outline-variant/40">
+<a class="p-1.5 rounded-full hover:text-primary hover:bg-surface-container/50 transition-colors" href="#code-inference" title="Terminal">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+<a class="p-1.5 rounded-full hover:text-primary hover:bg-surface-container/50 transition-colors" href="https://github.com/alex-aiml" rel="noopener noreferrer" target="_blank" title="Code">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</a>
+<a class="p-1.5 rounded-full hover:text-primary hover:bg-surface-container/50 transition-colors" href="#contact" title="Mail">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+<a class="font-label-md text-label-md text-primary px-3 py-1.5 rounded-full hover:bg-surface-container-high/60 transition-all duration-150" href="#contact">Contact</a>
+<a class="font-label-md text-label-md text-on-primary bg-primary-container px-3.5 py-1.5 rounded-full shadow-sm hover:brightness-105 active:scale-95 transition-all flex items-center gap-1" href="#resume">
+<span>Resume.pdf</span>
+<span class="material-symbols-outlined text-[14px]">download</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="relative z-10 pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+<!-- HERO / PROFILE SECTION -->
+<section class="relative pt-6" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left: Profile Identity & Bio (7 cols) -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Active Availability Status Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full frosted-glass-card border border-secondary-container/60 shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-md text-label-md text-secondary font-medium tracking-wide">Available for Summer 2025 AI Research &amp; SDE Internships</span>
+</div>
+<!-- Academic Headline & Specialization -->
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-2.5 font-label-md text-label-md">
+<span class="px-2.5 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-semibold tracking-wider uppercase">B.Tech 3rd Year</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-highest/60 text-primary border border-outline-variant/40 font-medium">CGPA: 9.42 / 10.00 • Academic Honors</span>
+<span class="px-2.5 py-0.5 rounded-md bg-secondary-fixed/50 text-on-secondary-fixed border border-secondary-fixed-dim/60 font-medium">Department Rank #2</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-none pt-2">
+              Alex Chen
+            </h1>
+<p class="font-headline-md text-headline-md text-primary font-medium tracking-tight">
+              3rd Year B.Tech in Computer Science (AI &amp; ML)
+            </p>
+</div>
+<!-- Mission / Motivational Quote -->
+<blockquote class="p-4 rounded-xl frosted-glass-card border-l-4 border-l-primary space-y-1">
+<p class="font-body-lg text-body-lg text-on-surface italic font-normal leading-relaxed">
+              “Building scalable neural systems, agentic workflows, and efficient vision architectures.”
+            </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-mono">
+              // Core focus: Quantized Edge Inference, Multimodal Transformers, Hybrid Vector RAG
+            </p>
+</blockquote>
+<!-- Connectivity Actions Cluster -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<!-- GitHub Link -->
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl frosted-glass-card hover:frosted-glass-active text-on-surface transition-all duration-150 group" href="https://github.com/alex-aiml" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[20px] group-hover:scale-110 transition-transform">code</span>
+<span class="font-label-md text-label-md font-semibold">github.com/alex-aiml</span>
+<span class="material-symbols-outlined text-[14px] text-outline">north_east</span>
+</a>
+<!-- LinkedIn Link -->
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl frosted-glass-card hover:frosted-glass-active text-on-surface transition-all duration-150 group" href="https://linkedin.com/in/alexchen-ai" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[20px] group-hover:scale-110 transition-transform">badge</span>
+<span class="font-label-md text-label-md font-semibold">linkedin.com/in/alexchen-ai</span>
+<span class="material-symbols-outlined text-[14px] text-outline">north_east</span>
+</a>
+<!-- Gmail Copy Action -->
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl frosted-glass-card hover:bg-surface-container-high/70 text-on-surface transition-all duration-150" onclick="navigator.clipboard.writeText('alex.chen.dev@gmail.com'); alert('Email alex.chen.dev@gmail.com copied to clipboard!');">
+<span class="material-symbols-outlined text-primary text-[20px]">content_copy</span>
+<span class="font-label-md text-label-md">alex.chen.dev@gmail.com</span>
+</button>
+</div>
+</div>
+<!-- Right: Frozen Avatar Glass Frame & Telemetry Card (5 cols) -->
+<div class="lg:col-span-5 relative flex flex-col items-center justify-center">
+<!-- Glass Capsule Housing Student Avatar -->
+<div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl p-3 frosted-glass-card border border-white/80 shadow-2xl shadow-primary/10 group">
+<div class="w-full h-full rounded-2xl overflow-hidden relative border border-surface-container-highest/40 bg-surface-container-low">
+<img alt="Portrait of AI &amp; ML Student Engineer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNO56KuyToq2xMgv3pUWTBbJ6UA1RCK_iY-uO7MRux9k1e38crvugWAAJjNW3oKaV1oS12RiU_t71UjKF5CdOmVR-b8jMwi8QtFFV8cp6_AZRqiOPX8-3OL-x56iEhhFuv8xFnRmsHxxFVe5t2MfBcfAVEIwuu3HzYMdu37W9BiF720k4u8rKxnuxpsmqpqq0p2hKLACv78mnijAeVjPawY2rM-FGeaaqN-rOZUPI">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  B.Tech (CSE - AI &amp; ML) '26
+                </span>
+<span class="font-label-sm text-label-sm text-primary font-mono font-medium">SRM-IST</span>
+</div>
+</div>
+<!-- Floating Specular Mini Badge -->
+<div class="absolute -top-3 -right-3 frosted-glass-active px-3 py-1.5 rounded-xl text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Dean's Honor List</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE CODE & INFERENCE COMPONENT -->
+<section class="space-y-6" id="code-inference">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-3">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span>Live Neural Compute // Self-Supervised Attention</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Motivated PyTorch Implementation</h2>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-full frosted-glass-card font-label-sm text-label-sm text-secondary font-medium">Kernel: Triton / CUDA 12.2</span>
+<span class="px-2.5 py-1 rounded-full frosted-glass-card font-label-sm text-label-sm text-primary font-medium">Torch 2.3.1+cu121</span>
+</div>
+</div>
+<!-- Sleek Frosted Glass Code Editor Window -->
+<div class="frosted-glass-card rounded-2xl overflow-hidden border border-white/80 shadow-xl">
+<!-- Editor Header Bar -->
+<div class="flex items-center justify-between px-4 py-3 bg-surface-container-low/80 border-b border-surface-container-highest/60 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 pr-3 border-r border-outline-variant/40">
+<span class="w-3 h-3 rounded-full bg-error/70 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary/70 inline-block"></span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">data_object</span>
+<span class="font-medium text-on-surface">contrastive_spectral_attention.py</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-outline font-mono">UTF-8 • Space: 4</span>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:brightness-110 active:scale-95 transition-all shadow-sm" id="runKernelBtn" onclick="runKernelSimulation()">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+<span>Execute Inference</span>
+</button>
+</div>
+</div>
+<!-- Code Block and Telemetry Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-surface-container-highest/60">
+<!-- Code Syntax Display (8 cols) -->
+<div class="lg:col-span-8 p-5 font-label-md text-label-md leading-relaxed overflow-x-auto text-on-surface-variant bg-surface-container-lowest/40">
+<pre class="font-mono space-y-1"><code><span class="text-outline italic"># Scaled Flash-Cross-Attention mechanism with spectral gating</span>
+<span class="text-primary font-semibold">import</span> torch
+<span class="text-primary font-semibold">import</span> torch.nn <span class="text-primary font-semibold">as</span> nn
+<span class="text-primary font-semibold">from</span> torch.cuda.amp <span class="text-primary font-semibold">import</span> autocast
+
+<span class="text-secondary font-semibold">class</span> <span class="text-tertiary-container font-bold">SpectralCrossAttention</span>(nn.Module):
+    <span class="text-secondary font-semibold">def</span> <span class="text-primary">__init__</span>(self, dim: <span class="text-secondary">int</span> = 512, heads: <span class="text-secondary">int</span> = 8, tau: <span class="text-secondary">float</span> = 0.07):
+        <span class="text-primary font-semibold">super</span>().__init__()
+        self.heads = heads
+        self.scale = (dim // heads) ** -0.5
+        self.tau = nn.Parameter(torch.tensor(tau))
+        self.to_qkv = nn.Linear(dim, dim * 3, bias=<span class="text-error font-medium">False</span>)
+        self.spectral_gate = nn.Sequential(
+            nn.LayerNorm(dim),
+            nn.Linear(dim, dim),
+            nn.GELU()
+        )
+
+    <span class="text-secondary font-semibold">@autocast</span>(dtype=torch.float16)
+    <span class="text-secondary font-semibold">def</span> <span class="text-primary">forward</span>(self, x: torch.Tensor, context: torch.Tensor = <span class="text-error font-medium">None</span>):
+        B, N, C = x.shape
+        q, k, v = self.to_qkv(x).chunk(3, dim=-1)
+        <span class="text-outline italic"># Scaled Cosine similarity modulated by temperature tau</span>
+        sim = torch.einsum(<span class="text-secondary">'b i d, b j d -&gt; b i j'</span>, q, k) * self.scale / self.tau.clamp(min=0.01)
+        attn = sim.softmax(dim=-1)
+        out = torch.einsum(<span class="text-secondary">'b i j, b j d -&gt; b i d'</span>, attn, v)
+        <span class="text-primary font-semibold">return</span> self.spectral_gate(out) + x</code></pre>
+</div>
+<!-- Live Telemetry & Output Dashboard (4 cols) -->
+<div class="lg:col-span-4 p-5 bg-surface-container-low/50 flex flex-col justify-between space-y-4">
+<div class="space-y-4">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-highest/60">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Execution Benchmark</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full font-mono" id="execStatus">STATUS: READY</span>
+</div>
+<!-- Metric Pills -->
+<div class="space-y-2.5">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 border border-surface-container-highest/60 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Forward Latency</span>
+<span class="font-label-md text-label-md font-bold text-on-surface font-mono" id="metricLatency">1.42 ms ± 0.08ms</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">timer</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 border border-surface-container-highest/60 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Peak VRAM Allocated</span>
+<span class="font-label-md text-label-md font-bold text-on-surface font-mono" id="metricVRAM">312.4 MB (FP16)</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">memory</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 border border-surface-container-highest/60 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Contrastive Loss (SimCLR)</span>
+<span class="font-label-md text-label-md font-bold text-secondary font-mono" id="metricLoss">0.0214 [Epoch 80]</span>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-[22px]">show_chart</span>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-highest/40 border border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm">
+<p class="font-mono text-outline">// Profiled on NVIDIA RTX 4090 with PyTorch 2.3 compile mode (inductor backend).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RESEARCH & FEATURED PROJECTS BENTO GRID -->
+<section class="space-y-8" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-3">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px]">science</span>
+<span>Production Architectures &amp; Open Source</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Top Featured Deep-Tech Projects</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          End-to-end engineered AI solutions spanning quantized vision models, multimodal vector systems, and speech telemetry.
+        </p>
+</div>
+<!-- Bento Grid (3 Top Projects) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project 1: NeuroVision Guard -->
+<div class="frosted-glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:frosted-glass-active transition-all duration-200 group border border-white/70">
+<div class="space-y-4">
+<!-- Header Badges -->
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                Edge CV
+              </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">v1.4 // Production</span>
+</div>
+<!-- Title & Description -->
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                NeuroVision Guard
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Real-time edge computer vision engine for automated multi-class industrial defect detection. Built with customized YOLOv8 heads and optimized via TensorRT FP16 serialization for millisecond latency on embedded Jetson modules.
+              </p>
+</div>
+<!-- Key Metrics Strip -->
+<div class="grid grid-cols-2 gap-2 p-3 rounded-xl bg-surface-container-low/70 border border-surface-container-highest/60">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Precision mAP@50</span>
+<span class="font-label-md text-label-md font-bold text-primary font-mono">98.4% mAP</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Inference Speed</span>
+<span class="font-label-md text-label-md font-bold text-secondary font-mono">14ms Latency</span>
+</div>
+</div>
+<!-- Tech Chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">YOLOv8</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">TensorRT</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">CUDA C++</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">FastAPI</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-2 border-t border-surface-container-highest/60">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-sm" href="https://neurovision.live" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Launch Demo</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+<a class="inline-flex items-center justify-center p-2 rounded-xl frosted-glass-card hover:bg-surface-container-high/60 text-on-surface transition-all" href="https://github.com/user/neurovision-guard" rel="noopener noreferrer" target="_blank" title="View Code on GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+</div>
+<!-- Project 2: OmniRAG Engine -->
+<div class="frosted-glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:frosted-glass-active transition-all duration-200 group border border-white/70">
+<div class="space-y-4">
+<!-- Header Badges -->
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Agentic LLM
+              </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">v2.0 // Active</span>
+</div>
+<!-- Title & Description -->
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                OmniRAG Engine
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Contextual autonomous agentic retrieval pipeline utilizing hybrid dense-sparse vector scoring alongside Neo4j entity knowledge graphs. Features self-corrective query decomposition powered by 4-bit quantized Llama 3 8B.
+              </p>
+</div>
+<!-- Key Metrics Strip -->
+<div class="grid grid-cols-2 gap-2 p-3 rounded-xl bg-surface-container-low/70 border border-surface-container-highest/60">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Retrieval HitRate</span>
+<span class="font-label-md text-label-md font-bold text-primary font-mono">94.0% Accuracy</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">TTFT Latency</span>
+<span class="font-label-md text-label-md font-bold text-secondary font-mono">420ms Response</span>
+</div>
+</div>
+<!-- Tech Chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">Llama 3 (4-bit)</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">Qdrant</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">Neo4j Graph</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">LangGraph</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-2 border-t border-surface-container-highest/60">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-sm" href="https://omnirag-app.io" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Launch Demo</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+<a class="inline-flex items-center justify-center p-2 rounded-xl frosted-glass-card hover:bg-surface-container-high/60 text-on-surface transition-all" href="https://github.com/user/omnirag-agent" rel="noopener noreferrer" target="_blank" title="View Code on GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+</div>
+<!-- Project 3: SpectralNet Audio -->
+<div class="frosted-glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:frosted-glass-active transition-all duration-200 group border border-white/70">
+<div class="space-y-4">
+<!-- Header Badges -->
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                Acoustic AI
+              </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">v0.9 // Lab Eval</span>
+</div>
+<!-- Title & Description -->
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                SpectralNet Audio
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Self-supervised acoustic representation framework analyzing continuous speech prosody for real-time affective valence and emotion classification, achieving state-of-the-art benchmarks on IEMOCAP.
+              </p>
+</div>
+<!-- Key Metrics Strip -->
+<div class="grid grid-cols-2 gap-2 p-3 rounded-xl bg-surface-container-low/70 border border-surface-container-highest/60">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Benchmark UAR</span>
+<span class="font-label-md text-label-md font-bold text-primary font-mono">87.2% IEMOCAP</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Feature Extraction</span>
+<span class="font-label-md text-label-md font-bold text-secondary font-mono">Mel-Spectrogram</span>
+</div>
+</div>
+<!-- Tech Chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">PyTorch</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">Librosa</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">HuggingFace</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/30 text-on-secondary-fixed border border-secondary-fixed-dim/40 font-label-sm text-label-sm font-mono">Wav2Vec 2.0</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-2 border-t border-surface-container-highest/60">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-sm" href="https://spectral-audio.dev" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>Launch Demo</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+<a class="inline-flex items-center justify-center p-2 rounded-xl frosted-glass-card hover:bg-surface-container-high/60 text-on-surface transition-all" href="https://github.com/user/spectral-net" rel="noopener noreferrer" target="_blank" title="View Code on GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- TECHNICAL SKILLS & STACK GRID -->
+<section class="space-y-8" id="stack">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full frosted-glass-card font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span>Core Engineering Competencies</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Architectural &amp; Mathematical Stack</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Synthesizing deep theoretical machine learning rigor with production-grade distributed software engineering.
+        </p>
+</div>
+<!-- 4 Categorized Frosted Stack Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stack 1: Deep Learning & Frameworks -->
+<div class="frosted-glass-card rounded-2xl p-6 space-y-4 hover:border-secondary-container/80 transition-all">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Deep Learning</h3>
+<p class="font-label-sm text-label-sm text-outline font-mono mt-0.5">Frameworks &amp; LLMs</p>
+</div>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md">
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">PyTorch 2.x</span>
+<span class="font-mono text-outline">Primary</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">HuggingFace Transformers</span>
+<span class="font-mono text-outline">PEFT/LoRA</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">TensorFlow / Keras</span>
+<span class="font-mono text-outline">Production</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">JAX / Flax</span>
+<span class="font-mono text-outline">Research</span>
+</li>
+</ul>
+</div>
+<!-- Stack 2: Core Engineering & Backend -->
+<div class="frosted-glass-card rounded-2xl p-6 space-y-4 hover:border-secondary-container/80 transition-all">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Systems &amp; Backend</h3>
+<p class="font-label-sm text-label-sm text-outline font-mono mt-0.5">Distributed Compute</p>
+</div>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md">
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Python 3.11+ / C++17</span>
+<span class="font-mono text-outline">High Perf</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">FastAPI / gRPC</span>
+<span class="font-mono text-outline">Microservices</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">CUDA C / Triton</span>
+<span class="font-mono text-outline">Kernel Dev</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Docker &amp; K8s</span>
+<span class="font-mono text-outline">Deployments</span>
+</li>
+</ul>
+</div>
+<!-- Stack 3: Data & Vector Stores -->
+<div class="frosted-glass-card rounded-2xl p-6 space-y-4 hover:border-secondary-container/80 transition-all">
+<div class="w-10 h-10 rounded-xl bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">database</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vector &amp; Data</h3>
+<p class="font-label-sm text-label-sm text-outline font-mono mt-0.5">RAG Infrastructure</p>
+</div>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md">
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Qdrant / Pinecone</span>
+<span class="font-mono text-outline">HNSW Index</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">PostgreSQL / pgvector</span>
+<span class="font-mono text-outline">Relational</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Redis Cache</span>
+<span class="font-mono text-outline">Pub/Sub</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Apache Spark</span>
+<span class="font-mono text-outline">ETL Data</span>
+</li>
+</ul>
+</div>
+<!-- Stack 4: Math & Foundations -->
+<div class="frosted-glass-card rounded-2xl p-6 space-y-4 hover:border-secondary-container/80 transition-all">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">functions</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Math &amp; Theory</h3>
+<p class="font-label-sm text-label-sm text-outline font-mono mt-0.5">Formal Foundations</p>
+</div>
+<ul class="space-y-2 text-on-surface-variant font-label-md text-label-md">
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Linear Algebra &amp; SVD</span>
+<span class="font-mono text-outline">Eigenval</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Convex Optimization</span>
+<span class="font-mono text-outline">ADAM/SGD</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Probabilistic Models</span>
+<span class="font-mono text-outline">Bayesian</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/70 border border-surface-container-highest/60">
+<span class="font-medium text-on-surface">Information Theory</span>
+<span class="font-mono text-outline">Entropy</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- RESEARCH PAPERS & MILESTONES -->
+<section class="space-y-6" id="milestones">
+<div class="flex items-center justify-between border-b border-surface-container-highest/60 pb-4">
+<div>
+<span class="font-label-md text-label-md text-primary uppercase font-mono tracking-wider">Publications &amp; Academic Honors</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Research Outputs (Preprints &amp; Workshops)</h2>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">ORCID: 0009-0004-9218-4421</span>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Milestone Paper 1 -->
+<div class="frosted-glass-card rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border border-white/70">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">IEEE Workshop 2024</span>
+<span class="font-label-sm text-label-sm text-outline">Primary Author</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Efficient Multi-Modal Embedding Distillation on Constrained Edge Neural Processors
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Alex Chen, Dr. K. Ramanathan. Presented at International Conference on Machine Learning &amp; Computer Vision (ICMLCV).
+            </p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high/60 text-primary font-label-md text-label-md hover:bg-surface-container-highest/70 transition-colors" href="#paper-pdf">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Preprint PDF</span>
+</a>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg frosted-glass-card text-on-surface font-label-md text-label-md hover:text-primary transition-colors" href="https://github.com/alex-aiml" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Artifacts</span>
+</a>
+</div>
+</div>
+<!-- Milestone Paper 2 -->
+<div class="frosted-glass-card rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border border-white/70">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">arXiv:2408.10922</span>
+<span class="font-label-sm text-label-sm text-outline">Under Peer Review</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Spectral Graph Gating in Attention Heuristics for Low-Rank Language Model Adapters
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Alex Chen, Ananya S., et al. Evaluating spectral eigenvalue thresholds for memory-sparing LoRA ranks.
+            </p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high/60 text-primary font-label-md text-label-md hover:bg-surface-container-highest/70 transition-colors" href="#paper-pdf">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>arXiv Draft</span>
+</a>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg frosted-glass-card text-on-surface font-label-md text-label-md hover:text-primary transition-colors" href="https://github.com/alex-aiml" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">dataset</span>
+<span>Weights</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CONNECTIVITY & CONTACT SECTION -->
+<section class="space-y-6" id="contact">
+<div class="frosted-glass-card rounded-3xl p-8 sm:p-12 border border-white/90 shadow-2xl relative overflow-hidden">
+<!-- Glow Backing -->
+<div class="ambient-glow-circle w-96 h-96 bg-secondary-fixed/40 -bottom-20 -right-20"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
+<!-- Left Info & Direct Channels (6 cols) -->
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Direct Comms Channel</span>
+</div>
+<h2 class="font-display-lg text-display-lg-mobile sm:text-headline-lg text-on-surface font-bold tracking-tight">
+              Let's Build Groundbreaking AI Together.
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+              Currently actively seeking <strong>Summer 2025 AI Research, Machine Learning Engineering, or Core Software Internships</strong>. Feel free to reach out for research collaborations, tech syncs, or formal inquiries.
+            </p>
+<!-- Direct Channel Fast Actions -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-md" onclick="navigator.clipboard.writeText('alex.chen.dev@gmail.com'); alert('Email address copied to clipboard!');">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy Gmail (alex.chen.dev@gmail.com)</span>
+</button>
+<a class="p-2.5 rounded-xl frosted-glass-card hover:bg-surface-container-high/60 text-primary transition-all" href="mailto:alex.chen.dev@gmail.com" title="Open Mail Client">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</a>
+</div>
+<div class="flex flex-wrap items-center gap-3 text-on-surface">
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl frosted-glass-card hover:border-secondary transition-all" href="https://linkedin.com/in/alexchen-ai" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
+<span class="font-label-md text-label-md font-semibold">Connect on LinkedIn</span>
+<span class="material-symbols-outlined text-[14px] text-outline">north_east</span>
+</a>
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl frosted-glass-card hover:border-primary transition-all" href="https://github.com/alex-aiml" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[18px]">code</span>
+<span class="font-label-md text-label-md font-semibold">Follow on GitHub</span>
+<span class="material-symbols-outlined text-[14px] text-outline">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Inquiry Glass Form (6 cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest/60 backdrop-blur-xl p-6 sm:p-8 rounded-2xl border border-surface-container-highest/80 shadow-inner">
+<form class="space-y-4" id="contactForm" onsubmit="event.preventDefault(); alert('Message dispatched! Alex will reply within 24 hours.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-mono">YOUR NAME</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low/80 border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-body-sm font-body-sm text-on-surface placeholder:text-outline transition-all" placeholder="Dr. Sarah Connor / Recruiter" required="" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-mono">YOUR EMAIL</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low/80 border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-body-sm font-body-sm text-on-surface placeholder:text-outline transition-all" placeholder="lab-director@ai.org" required="" type="email">
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-mono">SUBJECT / ROLE CATEGORY</label>
+<select class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low/80 border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-body-sm font-body-sm text-on-surface transition-all">
+<option>Summer 2025 AI/ML Internship Interview</option>
+<option>Research Collaboration / Paper Co-authorship</option>
+<option>Open Source Contribution / Mentorship</option>
+<option>General Engineering Inquiry</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-mono">MESSAGE</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low/80 border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-body-sm font-body-sm text-on-surface placeholder:text-outline transition-all" placeholder="Hi Alex, we reviewed your work on NeuroVision Guard and OmniRAG and would love to discuss..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:brightness-110 active:scale-98 transition-all flex items-center justify-center gap-2 shadow-md" type="submit">
+<span>Dispatch Message to Lab Terminal</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer (frosted ground) -->
+<footer class="docked full-width bottom bg-surface-container-low/70 backdrop-blur-2xl border-t border-surface-container-highest/80 flat no shadows text-primary">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto px-6 py-8 gap-4">
+<!-- Brand & Academic Copyright -->
+<div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+<span class="text-label-md font-label-md font-bold text-primary tracking-wider uppercase">ALEX.DEV // AI LAB</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Alex Chen • B.Tech AI &amp; ML • Precision Frozen Compute Shell</span>
+</div>
+<!-- Links Array from JSON Source of Truth -->
+<div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary hover:underline transition-colors duration-150" href="#code-inference">Terminal Source</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary hover:underline transition-colors duration-150" href="#milestones">Publications</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary hover:underline transition-colors duration-150" href="#projects">Model Zoo</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary hover:underline transition-colors duration-150" href="https://huggingface.co" rel="noopener noreferrer" target="_blank">HuggingFace</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary hover:underline transition-colors duration-150" href="#contact">GPG Key</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary hover:underline transition-colors duration-150" href="#code-inference">Latency Logs</a>
+</div>
+</div>
+</footer>
+<!-- Light Vanilla Script for Code Simulation -->
+<script>
+    function runKernelSimulation() {
+      const statusEl = document.getElementById('execStatus');
+      const latencyEl = document.getElementById('metricLatency');
+      const lossEl = document.getElementById('metricLoss');
+      const vramEl = document.getElementById('metricVRAM');
+      const btn = document.getElementById('runKernelBtn');
+
+      btn.disabled = true;
+      statusEl.textContent = 'STATUS: INFERRING...';
+      statusEl.className = 'font-label-sm text-label-sm text-primary bg-primary-fixed/60 px-2 py-0.5 rounded-full font-mono animate-pulse';
+
+      setTimeout(() => {
+        const randomLatency = (1.20 + Math.random() * 0.35).toFixed(2);
+        const randomLoss = (0.0190 + Math.random() * 0.0040).toFixed(4);
+        latencyEl.textContent = `${randomLatency} ms ± 0.04ms`;
+        lossEl.textContent = `${randomLoss} [Step ${Math.floor(Math.random() * 200 + 800)}]`;
+        vramEl.textContent = `298.1 MB (AMP FP16)`;
+
+        statusEl.textContent = 'STATUS: CONVERGED';
+        statusEl.className = 'font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full font-mono';
+        btn.disabled = false;
+      }, 700);
+    }
+  </script>
+</body></html>

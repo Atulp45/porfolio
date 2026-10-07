@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+portfolio/node_modules/
+portfolio/backend/node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.production
+portfolio/.env
+portfolio/backend/.env
+
+# Build outputs
+dist/
+build/
+portfolio/dist/
+.vercel/
+
+# Editor/OS
+.DS_Store
+*.log
+.vscode/
+.idea/
