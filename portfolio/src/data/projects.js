@@ -2,26 +2,33 @@
 
 export const projects = [
   {
-    id: "rag-research-assistant",
-    title: "AI Research Assistant (RAG)",
-    category: "Agentic LLM",
-    categoryColor: "primary",
-    description:
-      "A hybrid retrieval-augmented generation system for academic research. Combines dense vector search with BM25 sparse retrieval and neural reranking for high-precision document retrieval. Features self-corrective query decomposition via LangGraph agentic loop.",
-    technologies: ["Python", "LangChain", "LangGraph", "ChromaDB", "FastAPI", "Llama 3"],
+id: "ai-grievance-classification-system",
+title: "AI-Based Grievance Classification System",
+category: "Machine Learning",
+categoryColor: "primary",
+
+description:
+"An AI-based grievance classification system designed to classify complaints across different sectors and domains. It analyzes grievance text and categorizes complaints based on their content, helping organizations manage grievances more efficiently.",
+
+technologies: [
+"Python",
+"Machine Learning",
+"Natural Language Processing"
+],
     github: "https://github.com/Atulp45/rag-research-assistant",
-    demo: "",
-    featured: true,
-    metrics: [
-      { label: "Retrieval Accuracy", value: "~94%" },
-      { label: "Latency", value: "< 500ms" },
-    ],
-    capabilities: [
-      "Hybrid dense + sparse retrieval",
-      "Neural reranking pipeline",
-      "Self-corrective agentic loop",
-      "PDF & web source ingestion",
-    ],
+
+demo: "",
+featured: true,
+
+metrics: [],
+
+capabilities: [
+  "Multi-Sector Grievance Classification",
+  "Text-Based Complaint Analysis",
+  "Automatic Grievance Categorization",
+  "Complaint Category Prediction",
+],
+   
   },
   {
     id: "solar-dashboard",
