@@ -9,7 +9,7 @@ export const profile = {
   university: "RGPV University",
   year: "3rd Year",
   expectedGraduation: "2026",
-  cgpa: "7.5+",
+  cgpa: "6.34",
   email: "prajapatiatul883@gmail.com",
   github: "https://github.com/Atulp45",
   linkedin: "https://www.linkedin.com/in/atul-prajapati-353776339",
@@ -22,7 +22,7 @@ export const profile = {
   ],
   quickStats: [
     { label: "Year", value: "3rd Year" },
-    { label: "CGPA", value: "7.5+" },
+    { label: "CGPA", value: "6.34" },
     { label: "Focus", value: "AI/ML" },
     { label: "Language", value: "Python" },
   ]
