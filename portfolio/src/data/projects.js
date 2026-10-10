@@ -30,69 +30,53 @@ capabilities: [
 ],
    
   },
-  {
-    id: "solar-dashboard",
-    title: "Solar Monitoring Dashboard",
-    category: "Data Engineering",
-    categoryColor: "secondary",
-    description:
-      "Real-time solar energy monitoring platform built on Google Cloud. Ingests IoT sensor data via BigQuery streaming, processes it with Cloud Functions, and visualizes production metrics on an interactive React dashboard.",
-    technologies: ["React", "Google Cloud", "BigQuery", "Firebase", "Python", "Recharts"],
-    github: "https://github.com/Atulp45/solar-monitoring-dashboard",
-    demo: "",
-    featured: true,
-    metrics: [
-      { label: "Data Latency", value: "< 2s" },
-      { label: "Uptime", value: "99.9%" },
-    ],
-    capabilities: [
-      "Real-time IoT data ingestion",
-      "BigQuery analytics pipeline",
-      "Interactive metric visualizations",
-      "Automated anomaly alerts",
-    ],
-  },
-  {
-    id: "ml-classifier",
-    title: "Multi-class Text Classifier",
-    category: "ML Engineering",
-    categoryColor: "tertiary",
-    description:
-      "Fine-tuned BERT-based text classification system using QLoRA for parameter-efficient training. Achieves competitive accuracy on custom domain datasets with 4x reduced VRAM compared to full fine-tuning.",
-    technologies: ["PyTorch", "Transformers", "QLoRA", "PEFT", "Scikit-learn", "Python"],
-    github: "https://github.com/Atulp45/bert-qlora-classifier",
-    demo: "",
-    featured: true,
-    metrics: [
-      { label: "Accuracy", value: "92%+" },
-      { label: "VRAM Reduction", value: "4x" },
-    ],
-    capabilities: [
-      "QLoRA parameter-efficient fine-tuning",
-      "Custom domain adaptation",
-      "4-bit model quantization",
-      "Inference API with FastAPI",
-    ],
-  },
-  {
-    id: "open-source-contrib",
-    title: "Open Source Contributions",
-    category: "Open Source",
-    categoryColor: "secondary",
-    description:
-      "Contributions to ML tooling and open-source projects. Includes bug fixes, documentation improvements, and feature additions to Python/ML ecosystem libraries.",
-    technologies: ["Python", "Git", "GitHub", "Pytest", "CI/CD"],
-    github: "https://github.com/Atulp45",
-    demo: "",
-    featured: false,
-    metrics: [],
-    capabilities: [
-      "Bug fixes and patches",
-      "Documentation improvements",
-      "Test coverage expansion",
-      "Code review participation",
-    ],
-  },
+{
+  id: "attendance-management",
+  title: "Attendance Management System",
+  category: "Web Application",
+  categoryColor: "secondary",
+  description:
+    "An Attendance Management System designed to simplify student attendance tracking and record management. The application helps manage attendance records digitally, making it easier to monitor student attendance and maintain organized records.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  github: "https://github.com/Atulp45/bert-qlora-classifier",
+  demo: "",
+  featured: true,
+  metrics: [
+    { label: "Attendance Tracking", value: "Digital" },
+    { label: "Record Management", value: "Automated" },
+  ],
+  capabilities: [
+    "Digital student attendance tracking",
+    "Attendance record management",
+    "Student attendance monitoring",
+    "Organized attendance records",
+  ],
+},
+
+
+{
+  id: "amazon-clone",
+  title: "Amazon Website Clone",
+  category: "Frontend Development",
+  categoryColor: "secondary",
+  description:
+    "A frontend clone of the Amazon website built using HTML and CSS. The project recreates the e-commerce website layout with a navigation bar, product categories, product cards, and a responsive design to practice web development skills.",
+  technologies: ["HTML5", "CSS3"],
+  github: "https://github.com/Atulp45",
+  demo: "",
+  featured: true,
+  metrics: [
+    { label: "Technologies", value: "HTML & CSS" },
+    { label: "Project Type", value: "Frontend" },
+  ],
+  capabilities: [
+    "Amazon-inspired homepage design",
+    "Navigation bar and search section UI",
+    "Product categories and product cards",
+    "CSS-based styling and layout",
+  ],
+ },
+  
 ]
 
 export const featuredProjects = projects.filter((p) => p.featured)
