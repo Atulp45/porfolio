@@ -9,7 +9,7 @@ export const profile = {
   university: "RGPV University",
   year: "3rd Year",
   expectedGraduation: "2026",
-  cgpa: "6.34",
+  cgpa: "6.3+",
   email: "prajapatiatul883@gmail.com",
   github: "https://github.com/Atulp45",
   linkedin: "https://www.linkedin.com/in/atul-prajapati-353776339",
